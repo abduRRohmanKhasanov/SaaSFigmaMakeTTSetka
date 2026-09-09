@@ -1,0 +1,711 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..900&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  /* Primary */
+  --color-primary: var(--md-primary);
+  --color-on-primary: var(--md-on-primary);
+  --color-primary-container: var(--md-primary-container);
+  --color-on-primary-container: var(--md-on-primary-container);
+
+  /* Secondary */
+  --color-secondary: var(--md-secondary);
+  --color-on-secondary: var(--md-on-secondary);
+  --color-secondary-container: var(--md-secondary-container);
+  --color-on-secondary-container: var(--md-on-secondary-container);
+
+  /* Tertiary */
+  --color-tertiary: var(--md-tertiary);
+  --color-on-tertiary: var(--md-on-tertiary);
+  --color-tertiary-container: var(--md-tertiary-container);
+  --color-on-tertiary-container: var(--md-on-tertiary-container);
+
+  /* Error */
+  --color-error: var(--md-error);
+  --color-on-error: var(--md-on-error);
+  --color-error-container: var(--md-error-container);
+  --color-on-error-container: var(--md-on-error-container);
+
+  /* Surface */
+  --color-surface: var(--md-surface);
+  --color-on-surface: var(--md-on-surface);
+  --color-surface-variant: var(--md-surface-variant);
+  --color-on-surface-variant: var(--md-on-surface-variant);
+  --color-surface-container-lowest: var(--md-surface-container-lowest);
+  --color-surface-container-low: var(--md-surface-container-low);
+  --color-surface-container: var(--md-surface-container);
+  --color-surface-container-high: var(--md-surface-container-high);
+  --color-surface-container-highest: var(--md-surface-container-highest);
+
+  /* Outline */
+  --color-outline: var(--md-outline);
+  --color-outline-variant: var(--md-outline-variant);
+
+  /* Inverse */
+  --color-inverse-surface: var(--md-inverse-surface);
+  --color-inverse-on-surface: var(--md-inverse-on-surface);
+  --color-inverse-primary: var(--md-inverse-primary);
+
+  /* Scrim */
+  --color-scrim: var(--md-scrim);
+
+  /* Radii */
+  --radius-xs:   0.25rem;
+  --radius-sm:   0.5rem;
+  --radius-md:   0.75rem;
+  --radius-lg:   1rem;
+  --radius-xl:   1.25rem;
+  --radius-full: 9999px;
+
+  /* Font */
+  --font-sans: 'Roboto Flex', sans-serif;
+}
+
+/* ─── LIGHT THEME — TEAL (default) ─── */
+:root {
+  --md-primary:                  oklch(40% 0.12 188);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(87% 0.10 188);
+  --md-on-primary-container:     oklch(15% 0.08 188);
+
+  --md-secondary:                oklch(45% 0.07 200);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(88% 0.05 200);
+  --md-on-secondary-container:   oklch(18% 0.05 200);
+
+  --md-tertiary:                 oklch(42% 0.10 160);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(88% 0.08 160);
+  --md-on-tertiary-container:    oklch(16% 0.07 160);
+
+  --md-error:                    oklch(40% 0.20 25);
+  --md-on-error:                 oklch(100% 0 0);
+  --md-error-container:          oklch(90% 0.10 25);
+  --md-on-error-container:       oklch(20% 0.12 25);
+
+  --md-surface:                  oklch(98% 0.005 188);
+  --md-on-surface:               oklch(18% 0.02 188);
+  --md-surface-variant:          oklch(90% 0.03 188);
+  --md-on-surface-variant:       oklch(38% 0.05 188);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.008 188);
+  --md-surface-container:        oklch(93% 0.012 188);
+  --md-surface-container-high:   oklch(90% 0.015 188);
+  --md-surface-container-highest:oklch(87% 0.018 188);
+
+  --md-outline:                  oklch(55% 0.05 188);
+  --md-outline-variant:          oklch(80% 0.04 188);
+
+  --md-inverse-surface:          oklch(25% 0.02 188);
+  --md-inverse-on-surface:       oklch(93% 0.01 188);
+  --md-inverse-primary:          oklch(78% 0.12 188);
+
+  --md-scrim:                    oklch(0% 0 0 / 0.32);
+}
+.dark.theme-crimson {
+  --md-primary:                  oklch(72% 0.14 15);
+  --md-on-primary:               oklch(16% 0.14 15);
+  --md-primary-container:        oklch(26% 0.14 15);
+  --md-on-primary-container:     oklch(88% 0.09 15);
+  --md-secondary:                oklch(72% 0.06 20);
+  --md-on-secondary:             oklch(22% 0.07 20);
+  --md-secondary-container:      oklch(32% 0.07 20);
+  --md-on-secondary-container:   oklch(88% 0.05 20);
+  --md-tertiary:                 oklch(72% 0.09 60);
+  --md-on-tertiary:              oklch(20% 0.10 60);
+  --md-tertiary-container:       oklch(30% 0.10 60);
+  --md-on-tertiary-container:    oklch(88% 0.07 60);
+  --md-surface:                  oklch(14% 0.01 15);
+  --md-on-surface:               oklch(88% 0.01 15);
+  --md-surface-variant:          oklch(28% 0.03 15);
+  --md-on-surface-variant:       oklch(72% 0.04 15);
+  --md-surface-container-lowest: oklch(10% 0.008 15);
+  --md-surface-container-low:    oklch(17% 0.012 15);
+  --md-surface-container:        oklch(20% 0.015 15);
+  --md-surface-container-high:   oklch(24% 0.018 15);
+  --md-surface-container-highest:oklch(28% 0.020 15);
+  --md-inverse-surface:          oklch(88% 0.01 15);
+  --md-inverse-on-surface:       oklch(28% 0.02 15);
+  --md-inverse-primary:          oklch(38% 0.18 15);
+  --md-outline:                  oklch(55% 0.05 15);
+  --md-outline-variant:          oklch(32% 0.04 15);
+}
+
+/* ═══════════════════════════════════════════════
+   PALETTE: ORANGE  (hue ~55)
+═══════════════════════════════════════════════ */
+.theme-orange {
+  --md-primary:                  oklch(48% 0.16 55);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(90% 0.10 55);
+  --md-on-primary-container:     oklch(20% 0.12 55);
+  --md-secondary:                oklch(46% 0.07 60);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(90% 0.05 60);
+  --md-on-secondary-container:   oklch(24% 0.07 60);
+  --md-tertiary:                 oklch(42% 0.10 30);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(88% 0.07 30);
+  --md-on-tertiary-container:    oklch(22% 0.09 30);
+  --md-surface:                  oklch(98% 0.005 55);
+  --md-on-surface:               oklch(18% 0.01 55);
+  --md-surface-variant:          oklch(90% 0.03 55);
+  --md-on-surface-variant:       oklch(38% 0.04 55);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.008 55);
+  --md-surface-container:        oklch(93% 0.012 55);
+  --md-surface-container-high:   oklch(90% 0.016 55);
+  --md-surface-container-highest:oklch(87% 0.020 55);
+  --md-inverse-surface:          oklch(28% 0.02 55);
+  --md-inverse-on-surface:       oklch(94% 0.005 55);
+  --md-inverse-primary:          oklch(75% 0.12 55);
+  --md-outline:                  oklch(55% 0.05 55);
+  --md-outline-variant:          oklch(78% 0.03 55);
+}
+.dark.theme-orange {
+  --md-primary:                  oklch(80% 0.14 55);
+  --md-on-primary:               oklch(22% 0.14 55);
+  --md-primary-container:        oklch(32% 0.14 55);
+  --md-on-primary-container:     oklch(90% 0.10 55);
+  --md-secondary:                oklch(75% 0.06 60);
+  --md-on-secondary:             oklch(24% 0.07 60);
+  --md-secondary-container:      oklch(34% 0.07 60);
+  --md-on-secondary-container:   oklch(90% 0.05 60);
+  --md-tertiary:                 oklch(72% 0.09 30);
+  --md-on-tertiary:              oklch(20% 0.10 30);
+  --md-tertiary-container:       oklch(30% 0.10 30);
+  --md-on-tertiary-container:    oklch(88% 0.07 30);
+  --md-surface:                  oklch(14% 0.01 55);
+  --md-on-surface:               oklch(88% 0.01 55);
+  --md-surface-variant:          oklch(28% 0.03 55);
+  --md-on-surface-variant:       oklch(72% 0.04 55);
+  --md-surface-container-lowest: oklch(10% 0.008 55);
+  --md-surface-container-low:    oklch(17% 0.012 55);
+  --md-surface-container:        oklch(20% 0.015 55);
+  --md-surface-container-high:   oklch(24% 0.018 55);
+  --md-surface-container-highest:oklch(28% 0.020 55);
+  --md-inverse-surface:          oklch(88% 0.01 55);
+  --md-inverse-on-surface:       oklch(28% 0.02 55);
+  --md-inverse-primary:          oklch(48% 0.16 55);
+  --md-outline:                  oklch(55% 0.05 55);
+  --md-outline-variant:          oklch(32% 0.04 55);
+}
+
+/* ═══════════════════════════════════════════════
+   PALETTE: GRAPHITE  (hue neutral, low chroma)
+═══════════════════════════════════════════════ */
+.theme-graphite {
+  --md-primary:                  oklch(30% 0.02 220);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(82% 0.01 220);
+  --md-on-primary-container:     oklch(12% 0.02 220);
+  --md-secondary:                oklch(40% 0.02 220);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(85% 0.01 220);
+  --md-on-secondary-container:   oklch(20% 0.02 220);
+  --md-tertiary:                 oklch(38% 0.04 220);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(86% 0.02 220);
+  --md-on-tertiary-container:    oklch(20% 0.03 220);
+  --md-surface:                  oklch(98% 0.002 220);
+  --md-on-surface:               oklch(18% 0.008 220);
+  --md-surface-variant:          oklch(90% 0.01 220);
+  --md-on-surface-variant:       oklch(38% 0.01 220);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.005 220);
+  --md-surface-container:        oklch(93% 0.007 220);
+  --md-surface-container-high:   oklch(90% 0.009 220);
+  --md-surface-container-highest:oklch(87% 0.010 220);
+  --md-inverse-surface:          oklch(28% 0.01 220);
+  --md-inverse-on-surface:       oklch(94% 0.003 220);
+  --md-inverse-primary:          oklch(72% 0.01 220);
+  --md-outline:                  oklch(55% 0.01 220);
+  --md-outline-variant:          oklch(78% 0.01 220);
+}
+.dark.theme-graphite {
+  --md-primary:                  oklch(72% 0.01 220);
+  --md-on-primary:               oklch(10% 0.02 220);
+  --md-primary-container:        oklch(22% 0.02 220);
+  --md-on-primary-container:     oklch(82% 0.01 220);
+  --md-secondary:                oklch(68% 0.01 220);
+  --md-on-secondary:             oklch(18% 0.02 220);
+  --md-secondary-container:      oklch(28% 0.02 220);
+  --md-on-secondary-container:   oklch(85% 0.01 220);
+  --md-tertiary:                 oklch(70% 0.03 220);
+  --md-on-tertiary:              oklch(18% 0.03 220);
+  --md-tertiary-container:       oklch(28% 0.03 220);
+  --md-on-tertiary-container:    oklch(86% 0.02 220);
+  --md-surface:                  oklch(14% 0.005 220);
+  --md-on-surface:               oklch(88% 0.005 220);
+  --md-surface-variant:          oklch(28% 0.008 220);
+  --md-on-surface-variant:       oklch(72% 0.008 220);
+  --md-surface-container-lowest: oklch(10% 0.004 220);
+  --md-surface-container-low:    oklch(17% 0.006 220);
+  --md-surface-container:        oklch(20% 0.008 220);
+  --md-surface-container-high:   oklch(24% 0.009 220);
+  --md-surface-container-highest:oklch(28% 0.010 220);
+  --md-inverse-surface:          oklch(88% 0.005 220);
+  --md-inverse-on-surface:       oklch(28% 0.01 220);
+  --md-inverse-primary:          oklch(30% 0.02 220);
+  --md-outline:                  oklch(55% 0.01 220);
+  --md-outline-variant:          oklch(32% 0.01 220);
+}
+
+/* ═══════════════════════════════════════════════
+   TYPOGRAPHY SCALE — MD3
+═══════════════════════════════════════════════ */
+.display-large  { font-size: 3.5625rem; line-height: 4rem;    font-weight: 400; letter-spacing: -0.016rem; }
+.display-medium { font-size: 2.8125rem; line-height: 3.25rem; font-weight: 400; letter-spacing: 0; }
+.display-small  { font-size: 2.25rem;   line-height: 2.75rem; font-weight: 400; letter-spacing: 0; }
+.headline-large  { font-size: 2rem;     line-height: 2.5rem;  font-weight: 400; letter-spacing: 0; }
+.headline-medium { font-size: 1.75rem;  line-height: 2.25rem; font-weight: 400; letter-spacing: 0; }
+.headline-small  { font-size: 1.5rem;   line-height: 2rem;    font-weight: 400; letter-spacing: 0; }
+.title-large  { font-size: 1.375rem; line-height: 1.75rem; font-weight: 400; letter-spacing: 0; }
+.title-medium { font-size: 1rem;     line-height: 1.5rem;  font-weight: 500; letter-spacing: 0.009rem; }
+.title-small  { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; letter-spacing: 0.006rem; }
+.body-large  { font-size: 1rem;     line-height: 1.5rem;  font-weight: 400; letter-spacing: 0.031rem; }
+.body-medium { font-size: 0.875rem; line-height: 1.25rem; font-weight: 400; letter-spacing: 0.016rem; }
+.body-small  { font-size: 0.75rem;  line-height: 1rem;    font-weight: 400; letter-spacing: 0.025rem; }
+.label-large  { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; letter-spacing: 0.006rem; }
+.label-medium { font-size: 0.75rem;  line-height: 1rem;    font-weight: 500; letter-spacing: 0.031rem; }
+.label-small  { font-size: 0.6875rem;line-height: 1rem;    font-weight: 500; letter-spacing: 0.031rem; }
+
+/* ─── DARK THEME — TEAL ─── */
+.dark {
+  --md-primary:                  oklch(78% 0.12 188);
+  --md-on-primary:               oklch(20% 0.08 188);
+  --md-primary-container:        oklch(28% 0.09 188);
+  --md-on-primary-container:     oklch(87% 0.10 188);
+
+  --md-secondary:                oklch(75% 0.07 200);
+  --md-on-secondary:             oklch(22% 0.06 200);
+  --md-secondary-container:      oklch(30% 0.06 200);
+  --md-on-secondary-container:   oklch(88% 0.05 200);
+
+  --md-tertiary:                 oklch(76% 0.09 160);
+  --md-on-tertiary:              oklch(20% 0.07 160);
+  --md-tertiary-container:       oklch(28% 0.08 160);
+  --md-on-tertiary-container:    oklch(88% 0.08 160);
+
+  --md-error:                    oklch(80% 0.15 25);
+  --md-on-error:                 oklch(22% 0.12 25);
+  --md-error-container:          oklch(30% 0.14 25);
+  --md-on-error-container:       oklch(90% 0.10 25);
+
+  --md-surface:                  oklch(14% 0.01 188);
+  --md-on-surface:               oklch(90% 0.01 188);
+  --md-surface-variant:          oklch(28% 0.04 188);
+  --md-on-surface-variant:       oklch(78% 0.04 188);
+  --md-surface-container-lowest: oklch(10% 0.01 188);
+  --md-surface-container-low:    oklch(17% 0.015 188);
+  --md-surface-container:        oklch(20% 0.018 188);
+  --md-surface-container-high:   oklch(24% 0.02 188);
+  --md-surface-container-highest:oklch(28% 0.022 188);
+
+  --md-outline:                  oklch(58% 0.05 188);
+  --md-outline-variant:          oklch(32% 0.04 188);
+
+  --md-inverse-surface:          oklch(90% 0.01 188);
+  --md-inverse-on-surface:       oklch(26% 0.02 188);
+  --md-inverse-primary:          oklch(40% 0.12 188);
+
+  --md-scrim:                    oklch(0% 0 0 / 0.5);
+}
+
+/* ─── PALETTE: BLUE ─── */
+:root.theme-blue {
+  --md-primary:                  oklch(40% 0.18 260);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(88% 0.12 260);
+  --md-on-primary-container:     oklch(14% 0.10 260);
+  --md-secondary:                oklch(44% 0.08 250);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(88% 0.06 250);
+  --md-on-secondary-container:   oklch(17% 0.06 250);
+  --md-tertiary:                 oklch(42% 0.12 220);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(89% 0.09 220);
+  --md-on-tertiary-container:    oklch(16% 0.08 220);
+  --md-surface:                  oklch(98% 0.005 260);
+  --md-on-surface:               oklch(18% 0.02 260);
+  --md-surface-variant:          oklch(90% 0.03 260);
+  --md-on-surface-variant:       oklch(38% 0.05 260);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.008 260);
+  --md-surface-container:        oklch(93% 0.012 260);
+  --md-surface-container-high:   oklch(90% 0.015 260);
+  --md-surface-container-highest:oklch(87% 0.018 260);
+  --md-outline:                  oklch(55% 0.06 260);
+  --md-outline-variant:          oklch(80% 0.04 260);
+  --md-inverse-surface:          oklch(25% 0.02 260);
+  --md-inverse-on-surface:       oklch(93% 0.01 260);
+  --md-inverse-primary:          oklch(78% 0.14 260);
+}
+.dark.theme-blue {
+  --md-primary:                  oklch(78% 0.14 260);
+  --md-on-primary:               oklch(18% 0.10 260);
+  --md-primary-container:        oklch(27% 0.11 260);
+  --md-on-primary-container:     oklch(88% 0.12 260);
+  --md-secondary:                oklch(74% 0.07 250);
+  --md-on-secondary:             oklch(22% 0.06 250);
+  --md-secondary-container:      oklch(30% 0.06 250);
+  --md-on-secondary-container:   oklch(88% 0.06 250);
+  --md-surface:                  oklch(13% 0.012 260);
+  --md-on-surface:               oklch(90% 0.01 260);
+  --md-surface-variant:          oklch(27% 0.04 260);
+  --md-on-surface-variant:       oklch(78% 0.04 260);
+  --md-surface-container-lowest: oklch(9% 0.01 260);
+  --md-surface-container-low:    oklch(16% 0.015 260);
+  --md-surface-container:        oklch(20% 0.018 260);
+  --md-surface-container-high:   oklch(24% 0.02 260);
+  --md-surface-container-highest:oklch(28% 0.022 260);
+  --md-outline:                  oklch(58% 0.06 260);
+  --md-outline-variant:          oklch(32% 0.04 260);
+  --md-inverse-surface:          oklch(90% 0.01 260);
+  --md-inverse-on-surface:       oklch(25% 0.02 260);
+  --md-inverse-primary:          oklch(40% 0.18 260);
+}
+
+/* ─── PALETTE: INDIGO ─── */
+:root.theme-indigo {
+  --md-primary:                  oklch(38% 0.20 290);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(87% 0.12 290);
+  --md-on-primary-container:     oklch(14% 0.12 290);
+  --md-secondary:                oklch(43% 0.09 280);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(88% 0.07 280);
+  --md-on-secondary-container:   oklch(17% 0.07 280);
+  --md-tertiary:                 oklch(42% 0.11 240);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(88% 0.08 240);
+  --md-on-tertiary-container:    oklch(16% 0.08 240);
+  --md-surface:                  oklch(98% 0.005 290);
+  --md-on-surface:               oklch(18% 0.02 290);
+  --md-surface-variant:          oklch(90% 0.04 290);
+  --md-on-surface-variant:       oklch(38% 0.05 290);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.01 290);
+  --md-surface-container:        oklch(93% 0.014 290);
+  --md-surface-container-high:   oklch(90% 0.016 290);
+  --md-surface-container-highest:oklch(87% 0.018 290);
+  --md-outline:                  oklch(55% 0.07 290);
+  --md-outline-variant:          oklch(80% 0.05 290);
+  --md-inverse-surface:          oklch(25% 0.02 290);
+  --md-inverse-on-surface:       oklch(93% 0.01 290);
+  --md-inverse-primary:          oklch(78% 0.16 290);
+}
+.dark.theme-indigo {
+  --md-primary:                  oklch(76% 0.16 290);
+  --md-on-primary:               oklch(17% 0.12 290);
+  --md-primary-container:        oklch(26% 0.12 290);
+  --md-on-primary-container:     oklch(87% 0.12 290);
+  --md-secondary:                oklch(74% 0.08 280);
+  --md-on-secondary:             oklch(22% 0.07 280);
+  --md-secondary-container:      oklch(30% 0.07 280);
+  --md-on-secondary-container:   oklch(88% 0.07 280);
+  --md-surface:                  oklch(13% 0.012 290);
+  --md-on-surface:               oklch(90% 0.01 290);
+  --md-surface-variant:          oklch(27% 0.05 290);
+  --md-on-surface-variant:       oklch(78% 0.04 290);
+  --md-surface-container-lowest: oklch(9% 0.01 290);
+  --md-surface-container-low:    oklch(16% 0.016 290);
+  --md-surface-container:        oklch(20% 0.02 290);
+  --md-surface-container-high:   oklch(24% 0.022 290);
+  --md-surface-container-highest:oklch(28% 0.024 290);
+  --md-outline:                  oklch(58% 0.07 290);
+  --md-outline-variant:          oklch(32% 0.05 290);
+  --md-inverse-surface:          oklch(90% 0.01 290);
+  --md-inverse-on-surface:       oklch(25% 0.02 290);
+  --md-inverse-primary:          oklch(38% 0.20 290);
+}
+
+/* ─── PALETTE: CRIMSON ─── */
+:root.theme-crimson {
+  --md-primary:                  oklch(38% 0.18 10);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(88% 0.10 10);
+  --md-on-primary-container:     oklch(14% 0.10 10);
+  --md-secondary:                oklch(43% 0.07 20);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(88% 0.05 20);
+  --md-on-secondary-container:   oklch(17% 0.05 20);
+  --md-tertiary:                 oklch(42% 0.10 45);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(88% 0.08 45);
+  --md-on-tertiary-container:    oklch(16% 0.07 45);
+  --md-surface:                  oklch(98% 0.005 10);
+  --md-on-surface:               oklch(18% 0.02 10);
+  --md-surface-variant:          oklch(90% 0.03 10);
+  --md-on-surface-variant:       oklch(38% 0.05 10);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.008 10);
+  --md-surface-container:        oklch(93% 0.012 10);
+  --md-surface-container-high:   oklch(90% 0.015 10);
+  --md-surface-container-highest:oklch(87% 0.018 10);
+  --md-outline:                  oklch(55% 0.06 10);
+  --md-outline-variant:          oklch(80% 0.04 10);
+  --md-inverse-surface:          oklch(25% 0.02 10);
+  --md-inverse-on-surface:       oklch(93% 0.01 10);
+  --md-inverse-primary:          oklch(78% 0.14 10);
+}
+.dark.theme-crimson {
+  --md-primary:                  oklch(78% 0.14 10);
+  --md-on-primary:               oklch(18% 0.10 10);
+  --md-primary-container:        oklch(27% 0.10 10);
+  --md-on-primary-container:     oklch(88% 0.10 10);
+  --md-secondary:                oklch(74% 0.06 20);
+  --md-on-secondary:             oklch(22% 0.05 20);
+  --md-secondary-container:      oklch(30% 0.05 20);
+  --md-on-secondary-container:   oklch(88% 0.05 20);
+  --md-surface:                  oklch(13% 0.012 10);
+  --md-on-surface:               oklch(90% 0.01 10);
+  --md-surface-variant:          oklch(27% 0.04 10);
+  --md-on-surface-variant:       oklch(78% 0.04 10);
+  --md-surface-container-lowest: oklch(9% 0.01 10);
+  --md-surface-container-low:    oklch(16% 0.015 10);
+  --md-surface-container:        oklch(20% 0.018 10);
+  --md-surface-container-high:   oklch(24% 0.02 10);
+  --md-surface-container-highest:oklch(28% 0.022 10);
+  --md-outline:                  oklch(58% 0.06 10);
+  --md-outline-variant:          oklch(32% 0.04 10);
+  --md-inverse-surface:          oklch(90% 0.01 10);
+  --md-inverse-on-surface:       oklch(25% 0.02 10);
+  --md-inverse-primary:          oklch(38% 0.18 10);
+}
+
+/* ─── PALETTE: ORANGE ─── */
+:root.theme-orange {
+  --md-primary:                  oklch(50% 0.18 55);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(90% 0.12 55);
+  --md-on-primary-container:     oklch(18% 0.10 55);
+  --md-secondary:                oklch(48% 0.08 50);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(90% 0.06 50);
+  --md-on-secondary-container:   oklch(19% 0.06 50);
+  --md-tertiary:                 oklch(44% 0.10 30);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(89% 0.08 30);
+  --md-on-tertiary-container:    oklch(17% 0.07 30);
+  --md-surface:                  oklch(98% 0.006 55);
+  --md-on-surface:               oklch(18% 0.02 55);
+  --md-surface-variant:          oklch(90% 0.03 55);
+  --md-on-surface-variant:       oklch(38% 0.05 55);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(96% 0.009 55);
+  --md-surface-container:        oklch(93% 0.013 55);
+  --md-surface-container-high:   oklch(90% 0.016 55);
+  --md-surface-container-highest:oklch(87% 0.019 55);
+  --md-outline:                  oklch(55% 0.06 55);
+  --md-outline-variant:          oklch(80% 0.04 55);
+  --md-inverse-surface:          oklch(25% 0.02 55);
+  --md-inverse-on-surface:       oklch(93% 0.01 55);
+  --md-inverse-primary:          oklch(80% 0.15 55);
+}
+.dark.theme-orange {
+  --md-primary:                  oklch(80% 0.15 55);
+  --md-on-primary:               oklch(22% 0.10 55);
+  --md-primary-container:        oklch(30% 0.11 55);
+  --md-on-primary-container:     oklch(90% 0.12 55);
+  --md-secondary:                oklch(76% 0.07 50);
+  --md-on-secondary:             oklch(24% 0.06 50);
+  --md-secondary-container:      oklch(32% 0.06 50);
+  --md-on-secondary-container:   oklch(90% 0.06 50);
+  --md-surface:                  oklch(13% 0.012 55);
+  --md-on-surface:               oklch(90% 0.01 55);
+  --md-surface-variant:          oklch(27% 0.04 55);
+  --md-on-surface-variant:       oklch(78% 0.04 55);
+  --md-surface-container-lowest: oklch(9% 0.01 55);
+  --md-surface-container-low:    oklch(16% 0.015 55);
+  --md-surface-container:        oklch(20% 0.018 55);
+  --md-surface-container-high:   oklch(24% 0.02 55);
+  --md-surface-container-highest:oklch(28% 0.022 55);
+  --md-outline:                  oklch(58% 0.06 55);
+  --md-outline-variant:          oklch(32% 0.04 55);
+  --md-inverse-surface:          oklch(90% 0.01 55);
+  --md-inverse-on-surface:       oklch(25% 0.02 55);
+  --md-inverse-primary:          oklch(50% 0.18 55);
+}
+
+/* ─── PALETTE: GRAPHITE ─── */
+:root.theme-graphite {
+  --md-primary:                  oklch(35% 0.03 240);
+  --md-on-primary:               oklch(100% 0 0);
+  --md-primary-container:        oklch(85% 0.02 240);
+  --md-on-primary-container:     oklch(12% 0.02 240);
+  --md-secondary:                oklch(42% 0.02 240);
+  --md-on-secondary:             oklch(100% 0 0);
+  --md-secondary-container:      oklch(88% 0.015 240);
+  --md-on-secondary-container:   oklch(16% 0.015 240);
+  --md-tertiary:                 oklch(43% 0.04 210);
+  --md-on-tertiary:              oklch(100% 0 0);
+  --md-tertiary-container:       oklch(88% 0.03 210);
+  --md-on-tertiary-container:    oklch(16% 0.03 210);
+  --md-surface:                  oklch(97% 0.002 240);
+  --md-on-surface:               oklch(17% 0.01 240);
+  --md-surface-variant:          oklch(89% 0.015 240);
+  --md-on-surface-variant:       oklch(37% 0.03 240);
+  --md-surface-container-lowest: oklch(100% 0 0);
+  --md-surface-container-low:    oklch(95% 0.005 240);
+  --md-surface-container:        oklch(92% 0.008 240);
+  --md-surface-container-high:   oklch(89% 0.010 240);
+  --md-surface-container-highest:oklch(86% 0.012 240);
+  --md-outline:                  oklch(54% 0.02 240);
+  --md-outline-variant:          oklch(79% 0.02 240);
+  --md-inverse-surface:          oklch(24% 0.01 240);
+  --md-inverse-on-surface:       oklch(92% 0.008 240);
+  --md-inverse-primary:          oklch(76% 0.03 240);
+}
+.dark.theme-graphite {
+  --md-primary:                  oklch(76% 0.03 240);
+  --md-on-primary:               oklch(17% 0.02 240);
+  --md-primary-container:        oklch(25% 0.02 240);
+  --md-on-primary-container:     oklch(85% 0.02 240);
+  --md-secondary:                oklch(73% 0.02 240);
+  --md-on-secondary:             oklch(20% 0.015 240);
+  --md-secondary-container:      oklch(29% 0.015 240);
+  --md-on-secondary-container:   oklch(88% 0.015 240);
+  --md-surface:                  oklch(13% 0.008 240);
+  --md-on-surface:               oklch(90% 0.008 240);
+  --md-surface-variant:          oklch(27% 0.015 240);
+  --md-on-surface-variant:       oklch(78% 0.02 240);
+  --md-surface-container-lowest: oklch(9% 0.006 240);
+  --md-surface-container-low:    oklch(16% 0.010 240);
+  --md-surface-container:        oklch(20% 0.012 240);
+  --md-surface-container-high:   oklch(24% 0.014 240);
+  --md-surface-container-highest:oklch(28% 0.016 240);
+  --md-outline:                  oklch(58% 0.02 240);
+  --md-outline-variant:          oklch(32% 0.015 240);
+  --md-inverse-surface:          oklch(90% 0.008 240);
+  --md-inverse-on-surface:       oklch(24% 0.01 240);
+  --md-inverse-primary:          oklch(35% 0.03 240);
+}
+
+/* ─── TYPOGRAPHY SCALE MD3 ─── */
+.display-large {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 3.5625rem;
+  line-height: 4rem;
+  font-weight: 400;
+  letter-spacing: -0.015625rem;
+}
+.display-medium {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 2.8125rem;
+  line-height: 3.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.display-small {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 2.25rem;
+  line-height: 2.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.headline-large {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.headline-medium {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.headline-small {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.title-large {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1.375rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+.title-medium {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0.009375rem;
+}
+.title-small {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.00625rem;
+}
+.body-large {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.03125rem;
+}
+.body-medium {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.015625rem;
+}
+.body-small {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.025rem;
+}
+.label-large {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.00625rem;
+}
+.label-medium {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03125rem;
+}
+.label-small {
+  font-family: 'Roboto Flex', sans-serif;
+  font-size: 0.6875rem;
+  line-height: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.03125rem;
+}
+
+/* ─── ELEVATION ─── */
+.elevation-0 { box-shadow: none; }
+.elevation-1 { box-shadow: 0 1px 2px oklch(0% 0 0 / 0.12), 0 1px 3px 1px oklch(0% 0 0 / 0.07); }
+.elevation-2 { box-shadow: 0 1px 2px oklch(0% 0 0 / 0.12), 0 2px 6px 2px oklch(0% 0 0 / 0.07); }
+.elevation-3 { box-shadow: 0 4px 8px 3px oklch(0% 0 0 / 0.07), 0 1px 3px oklch(0% 0 0 / 0.12); }
+
+/* ─── BASE ─── */
+html, body, #root {
+  height: 100%;
+  font-family: 'Roboto Flex', sans-serif;
+}
+body {
+  background-color: var(--md-surface);
+  color: var(--md-on-surface);
+  -webkit-font-smoothing: antialiased;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar { width: 0; height: 0; }
